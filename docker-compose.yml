@@ -2,10 +2,10 @@ version: '2'
 
 services:
   servidor:
-    build: php7_apache
+    build: .
     container_name: php7_apache
     ports:
       - "8090:80"
     volumes:
-      - ./wwww:/var/www/html
+      - ./www:/var/www/html
       - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
